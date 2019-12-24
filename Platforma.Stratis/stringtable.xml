@@ -1,0 +1,149 @@
+﻿<!-- 
+Статья по файлу перевода - https://community.bistudio.com/wiki/Stringtable.xml
+Примеры - https://community.bistudio.com/wiki/createDiaryRecord
+
+Шаблон: 
+
+<Key ID="STRD_test">
+<Original>English puper text</Original>
+<Russian>Русиш текст</Russian>
+</Key>
+
+Поддерживается разметка html (размеры, цвета и т.д.)
+< = &lt;
+> = &gt;
+-->
+
+<Project name="PL_Project">
+<Package name="PL_Package">
+
+<Container name="Breefing">
+
+<!-- ЗАДАЧИ -->
+<Key ID="STRD_Task1">
+<Original>Зачистить лагерь</Original>
+</Key>
+<Key ID="STRD_Task1_1">
+<Original>Зачистить &lt;marker name="task1"&gt;лагерь&lt;/marker&gt;.</Original>
+</Key>
+
+<!-- БРИФИНГ -->
+<Key ID="STRD_Plan_Title1">
+<Original>План</Original>
+</Key>
+<Key ID="STRD_Plan1">
+<Original>Пиши чё хочеш, то что будет в плане. &lt;br/&gt;Можно вставить картинку &lt;br/&gt; &lt;img image='logo.jpg' width='512'  height='256' &gt; &lt;br/&gt;</Original>
+</Key>
+<Key ID="STRD_Plan_Title2">
+<Original>Дневник</Original>
+</Key>
+<Key ID="STRD_Plan2">
+<Original>Мои писанины в дневнике</Original>
+</Key>
+
+</Container>
+
+<Container name="System">
+
+<!-- НАЗВАНИЕ МИССИИ -->
+<Key ID="STRD_PL_name">
+<Original>Название миссии</Original>
+</Key>
+<Key ID="STRD_PL_init">
+<Original>В начале миссии при загрузке, пиши чё надо.</Original>
+</Key>
+<Key ID="STRD_PL_text">
+<Original>Описание миссии при выборе миссий в меню</Original>
+</Key>
+<Key ID="STRD_PL_start">
+<Original>Стратис. 2030 год.</Original>
+</Key>
+
+<!-- ДЕБРИФИНГ -->
+<Key ID="STRD_end1">
+<Original>Ну вот и все</Original>
+</Key> 
+<Key ID="STRD_end1_des">
+<Original>Красавчик! Мир будет спать спокойно!</Original>
+</Key> 
+<Key ID="STRD_Loser">
+<Original>Mission failed.</Original>
+<Russian>Миссия провалена.</Russian>
+</Key>
+<Key ID="STRD_proval_loser">
+<Original>You ran away</Original>
+<Russian>Вы убежали</Russian>
+</Key>
+<Key ID="STRD_proval_frendlyFire">
+<Original>Friendly fire</Original>
+<Russian>Огонь по своим</Russian>
+</Key>
+<Key ID="STRD_proval_civilian">
+<Original>You killed civil</Original>
+<Russian>Вы убили гражданского</Russian>
+</Key>
+<Key ID="STRD_proval_fire">
+<Original>It is forbidden to shoot</Original>
+<Russian>Запрещено стрелять</Russian>
+</Key>
+<Key ID="STRD_pl_loser_jip">
+<Original>You can not enter during the game.</Original>
+<Russian>Нельзя заходить во время игры.</Russian>
+</Key>
+<Key ID="STRD_pl_loser_kill_player">
+<Original>One of the players has died.</Original>
+<Russian>Один из игроков умер.</Russian>
+</Key>
+<Key ID="STRD_proval1">
+<Original>Complete all assigned tasks.</Original>
+<Russian>Выполнять все поставленные задачи.</Russian>
+</Key>
+
+</Container>
+
+<Container name="Says">
+
+<!-- ДИАЛОГИ -->
+<Key ID="STRD_PL_SAY1">
+<Original>ШТАБ, на связи ЗАПАД, мы выходим на позицию для стрельбы</Original>
+</Key>
+<Key ID="STRD_PL_SAY2">
+<Original>Понял вас ЗАПАД, огонь по готовности, конец связи</Original>
+</Key>
+<Key ID="STRD_PL_SAY3">
+<Original>За бугром двое, как будешь готов - стреляй</Original>
+</Key>
+<Key ID="STRD_PL_SAY4">
+<Original>Убил обоих</Original>
+</Key>
+<Key ID="STRD_PL_SAY5">
+<Original>Отлично!</Original>
+</Key>
+<Key ID="STRD_PL_SAY6">
+<Original>ШТАБ, мы зачистили КПП</Original>
+</Key>
+<Key ID="STRD_PL_SAY7">
+<Original>Принял ЗАПАД, уходите в безопасное место</Original>
+</Key>
+
+</Container>
+
+<Container name="Persons">
+
+<!-- ПЕРСОНАЖИ -->
+<Key ID="STRD_pl_person_1">
+<Original>Кузьма Задребулька</Original>
+</Key>
+<Key ID="STRD_pl_person_2">
+<Original>Сергей Серов</Original>
+</Key>
+<Key ID="STRD_pl_group_1">
+<Original>ЗАПАД</Original>
+</Key>
+<Key ID="STRD_pl_group_2">
+<Original>ШТАБ</Original>
+</Key>
+
+</Container>
+</Package>
+</Project>

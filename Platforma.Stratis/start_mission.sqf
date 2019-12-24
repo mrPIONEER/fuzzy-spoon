@@ -5,9 +5,9 @@
 playmusic "baz";
 [parseText localize "STRD_PL_start", true, nil, 7, 0.7, 0] spawn BIS_fnc_textTiles; // стартовый текст
 
-
-_rolik = [] spawn {
 // Ролик
+_rolik = [] spawn {
+
 [otr,"STRD_PL_SAY1","STRD_PL_SAY1",false,true] spawn PL_fnc_Say;
 [true] call PL_fnc_Cam;
 [otr,[1,2,1.7],0] call PL_fnc_CamTarget;

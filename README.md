@@ -15,6 +15,9 @@
 
 Нужно просто заполнить, за вас уже всё сделано!
 
+## Как работать с платформой
+
+[![Watch the video](https://img.youtube.com/vi/T-D1KVIuvjA/maxresdefault.jpg)](https://youtu.be/T-D1KVIuvjA)
 
 ## Связаться с автором
 * Vkontakte
@@ -28,6 +31,4 @@
 Финансовая помощь на кофе и корм кошке - https://www.donationalerts.com/r/pioneer_chovban
 
 
-[![Watch the video](https://img.youtube.com/vi/T-D1KVIuvjA/maxresdefault.jpg)](https://youtu.be/T-D1KVIuvjA)
 
-https://youtu.be/T-D1KVIuvjA

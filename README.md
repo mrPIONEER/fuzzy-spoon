@@ -26,3 +26,8 @@
 По всем вопросам и предложениям касательно этой платформы можете писать.
 
 Финансовая помощь на кофе и корм кошке - https://www.donationalerts.com/r/pioneer_chovban
+
+
+[![Watch the video](https://img.youtube.com/vi/T-D1KVIuvjA/maxresdefault.jpg)](https://youtu.be/T-D1KVIuvjA)
+
+https://youtu.be/T-D1KVIuvjA

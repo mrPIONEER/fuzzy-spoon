@@ -15,10 +15,12 @@
 Нужно просто заполнить, за вас уже всё сделано!
 
 ## Как работать с платформой
+Рекомендую посмотреть видео, чтобы хоть что-то понять о чем эта платформа и как с ней работать.
 
 [![Watch the video](https://img.youtube.com/vi/5joqKab7MOI/maxresdefault.jpg)](https://youtu.be/5joqKab7MOI)
 
 ## Как скачать с GitHub
+Если не поняли как скачать с этого сайта - посмотрите видео:
 
 [![Watch the video](https://img.youtube.com/vi/p0hUQr8TSZE/maxresdefault.jpg)](https://youtu.be/p0hUQr8TSZE)
 

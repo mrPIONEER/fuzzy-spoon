@@ -16,7 +16,11 @@
 
 ## Как работать с платформой
 
-[![Watch the video](https://img.youtube.com/vi/T-D1KVIuvjA/maxresdefault.jpg)](https://youtu.be/T-D1KVIuvjA)
+[![Watch the video](https://img.youtube.com/vi/5joqKab7MOI/maxresdefault.jpg)](https://youtu.be/5joqKab7MOI)
+
+## Как скачать с GitHub
+
+[![Watch the video](https://img.youtube.com/vi/p0hUQr8TSZE/maxresdefault.jpg)](https://youtu.be/p0hUQr8TSZE)
 
 ## Связаться с автором
 * https://www.youtube.com/channel/UCW6SMbTQPV76lmGlEJt-qgg/

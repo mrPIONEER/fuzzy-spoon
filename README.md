@@ -19,11 +19,10 @@
 [![Watch the video](https://img.youtube.com/vi/T-D1KVIuvjA/maxresdefault.jpg)](https://youtu.be/T-D1KVIuvjA)
 
 ## Связаться с автором
-* Vkontakte
-* Instagram
-* YouTube
-* web-pioneer@yandex.ru
-* discord - PIONEER#5817 
+* https://www.youtube.com/channel/UCW6SMbTQPV76lmGlEJt-qgg/
+* https://vk.com/mchovban
+* https://www.instagram.com/mikhailchovban/
+* Discord- PIONEER#5817
 
 По всем вопросам и предложениям касательно этой платформы можете писать.
 

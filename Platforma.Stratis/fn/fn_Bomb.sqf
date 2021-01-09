@@ -5,7 +5,7 @@
 
 ЗАПУСК СКРИПТА:	
 
-[10,"Bo_Mk82",bot_1,8,80] spawn PL_fnc_Bomb;
+[10,"R_80mm_HE",bot_1,8,200] spawn PL_fnc_Bomb;
 
 ПОРЯДОК аргументов в скобках:
 

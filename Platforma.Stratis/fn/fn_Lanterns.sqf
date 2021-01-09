@@ -48,4 +48,3 @@ _light setLightAmbient _ambient;
 _light setLightIntensity _intensity;
 _light setLightAttenuation _attenuation;
 _light setLightDayLight false;
-

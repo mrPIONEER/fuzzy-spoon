@@ -6,6 +6,9 @@
 */
 
 
+// jip
+if !(isNil "INITDONE") exitWith {};
+INITDONE = true;
 
 titleCut ["","Black faded",0];
 
@@ -28,13 +31,14 @@ group baza setGroupId [localize "STRD_pl_group_2", "GroupColor0"];
 [] spawn PL_fnc_NoSnake;
 [] spawn PL_fnc_No3D;
 [] spawn PL_fnc_FrendlyFire;
-[] spawn PL_fnc_RealisticUnitsRagdoll;
 
 setViewDistance 2000;
 otr allowDamage true;
 
+player call compile preprocessFileLineNumbers "equip\s1.sqf";
+
 // ЗАДАЧИ
-[west, ["task1"], [localize "STRD_Task1_des", localize "STRD_Task1", "task1"], objNull ,1, 2, false, "attack"] call BIS_fnc_taskCreate;
+["task1", true, [localize "STRD_Task1_des", localize "STRD_Task1","task1"], getMarkerPos "task1", "CREATED", 1, true, true, "default", true] call BIS_fnc_setTask;
 
 // БРИФИНГ
 player createDiaryRecord ["Diary", [localize "STRD_Plan_title1", localize "STRD_Plan1"]];
@@ -53,4 +57,4 @@ titleCut ["","Black in",1];
 enableRadio true;
 
 // стартовый скрипт миссии
-[] execVM "start_mission.sqf";
+//[] execVM "start_mission.sqf";

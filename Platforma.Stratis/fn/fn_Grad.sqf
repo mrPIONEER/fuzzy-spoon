@@ -1,12 +1,11 @@
 /*
-	Ђвтор: Slon
-	ђакетный обстрел
+	Р Р°РєРµС‚РЅС‹Р№ РѕР±СЃС‚СЂРµР»
 
-	["цель_обстрела","имя_макера вылета ракет",колво_выстрелов,разброс] spawn PL_fnc_Grad
+	["С†РµР»СЊ_РѕР±СЃС‚СЂРµР»Р°","РёРјВ¤_РјР°РєРµСЂР° РІС‹Р»РµС‚Р° СЂР°РєРµС‚",РєРѕР»РІРѕ_РІС‹СЃС‚СЂРµР»РѕРІ,СЂР°Р·Р±СЂРѕСЃ] spawn PL_fnc_Grad
 	
 	["M_ed","M_st",100,300] spawn PL_fnc_Grad
 	
-	‚аниль:
+	Р’Р°РЅРёР»СЊ:
 	"M_Zephyr" | "Missile_AA_04_F" | "Rocket_03_AP_F" | "M_NLAW_AT_F"
 */
 
@@ -28,7 +27,7 @@ _hp = (_ps0 select 2) - (_ps1 select 2);
 
 _a = 0;
 While {_a < _kolvo} do {
-_ob = "M_NLAW_AT_F"  createVehicle _ps1;
+_ob = "LIB_R_280mm_WkSpr"  createVehicle _ps1;
 _ob setPos _ps1;
 _ob setVectorDirAndUp [[_xp + (random _random) - 50,_yp + (random _random) - 50,_hp],[_xp + (random _random) - 50,_yp + (random _random) - 50,_hp]];
 sleep 1;

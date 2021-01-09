@@ -1,22 +1,22 @@
 /*
-	Автор: Zealot
-	Запрет на снятие униформы.
+    РђРІС‚РѕСЂ: PIONEER
+	Р—Р°РїСЂРµС‚ РЅР° СЃРЅСЏС‚РёРµ СѓРЅРёС„РѕСЂРјС‹.
 	
 	[] spawn PL_fnc_Nouniform;
 */
 
 
-_zlt_lockInvSlots = {
+_pl_lock_uniform = {
     waitUntil {!(isNull (findDisplay 602))};
-    while {!(isNull (findDisplay 602))} do {// Keep the "uniform slot" control on lockdown. Else there are loop holes. No pun intended.
+    while {!(isNull (findDisplay 602))} do {
        ctrlEnable [6331, false];  
        sleep 0.001;
     };   
 };  
 
-if (!isDedicated && hasInterface) then {
+if (!isDedicated and hasInterface) then {
     [] spawn {
        waitUntil {!(isNull player)};
-       player addEventHandler ["inventoryOpened", {_this spawn _zlt_lockInvSlots;}];
+       player addEventHandler ["inventoryOpened", {_this spawn _pl_lock_uniform;}];
     };
 };

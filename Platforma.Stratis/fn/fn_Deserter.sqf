@@ -1,48 +1,33 @@
 /*
-	Автор: [SV] Simych, PIONEER
-	Скрипт провала миссии
+	Автор: PIONEER
+	Скрипт провала миссии по дезертирству
 
-	Ставим ТРИГГЕР
-
-	Тип: Нет
-	Активация: Кто угодно - для всех, либо ставье фракцию для кого ограничить зону
-	Тип активации: Присутствует
-	Повторяемый: ДА
-	Только сервер: НЕТ
-
-	Пишем в
+	ТРИГГЕР
 
 	Условие:
 	player in thislist - только пехота.
 	(player in thislist) or (vehicle player in thislist) - пехота+техника.
 
 	При активации:
-	stop1 = [] spawn PL_fnc_deserter;
-
-	Вместо stop1 можно любое свое значение, но учтите каждый триггер должен иметь разное значение!
-	т.е. например stop1  stop2  stop3 и т.д. чтоб скрипт случайно не сработал на всех триггерах сразу.
+	pl_stop_1 = [] spawn PL_fnc_deserter;
 
 	При деактивации:
-	terminate stop1;
-
-	Это делается для того, чтоб скрипт выгружался когда человек выходил из триггера! ОБЯЗАТЕЛЬНО!
+	terminate pl_stop_1;
 */
 
 
-private _pname = format ["%1",name player];
-private _mess = "<t color='#ff0000'>STOP </t>" +_pname+ "<t color='#ff0000'><br /></t>";
-[_mess,0,0.5,5,1] spawn BIS_fnc_dynamicText;
+[localize "STRD_proval_deser",0,0.5,5,1] spawn BIS_fnc_dynamicText;
 sleep 5;
 ["<t color='#ff0000'>5</t>",0,0.4,1,1] spawn BIS_fnc_dynamicText;
-sleep 1;
+sleep 2;
 ["<t color='#ff0000'>4</t>",0,0.4,1,1] spawn BIS_fnc_dynamicText;
-sleep 1;
+sleep 2;
 ["<t color='#ff0000'>3</t>",0,0.4,1,1] spawn BIS_fnc_dynamicText;
-sleep 1;
+sleep 2;
 ["<t color='#ff0000'>2</t>",0,0.4,1,1] spawn BIS_fnc_dynamicText;
-sleep 1;
+sleep 2;
 ["<t color='#ff0000'>1</t>",0,0.4,1,1] spawn BIS_fnc_dynamicText;
-sleep 1;
+sleep 2;
 
 {
 	pl_proval = player createSimpleTask [localize "STRD_proval1"];

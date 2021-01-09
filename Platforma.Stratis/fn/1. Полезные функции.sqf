@@ -1,5 +1,7 @@
 // Все БИС функции: https://community.bistudio.com/wiki/Category:Arma_3:_Functions
 
+[ vehicle player, 50, 60, true, 0] spawn BIS_fnc_UnitCapture;
+
 // ДЕЙСТВИЕ: 
 
 [

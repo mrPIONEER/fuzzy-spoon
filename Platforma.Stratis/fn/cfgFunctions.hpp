@@ -22,7 +22,10 @@ class Platforma {
 		
 		// [player,"TALKING",false,"ASIS"] spawn PL_fnc_Anim;
 		class Anim {};	// анимации
-		
+
+		// [this,"STAND1",{time>5}] call PL_fnc_AnimBisCombat;
+		class AnimBisCombat {};	// анимации от БИС
+
 		// ["end1",true] call PL_fnc_EndMis;		
 		class EndMis {}; // конец миссии
 		
@@ -34,13 +37,7 @@ class Platforma {
 		
 		// [] call PL_fnc_FrendlyFire;		
 		class FrendlyFire {}; // провал если игрок убьет своего или гражданского
-						
-		// [w1,"ups_sol"] spawn PL_fnc_UPS;
-		class UPS {}; // продвинутый скрипт патруля
-		
-		// ["ups_sol",position player,50] call PL_fnc_UPSmarker
-		class UPSmarker {}; // создание маркера-зоны патруля UPS
-		
+					
 		// [] call PL_fnc_vcom;
 		class Vcom {}; // Поддержка Vcom
 		
@@ -49,7 +46,10 @@ class Platforma {
 		
 		// [this,"marker","MOVE","NORMAL","LINE"] call PL_fnc_Waypoint
 		class Waypoint {};	// создание вейпоинта для юнитов
-		
+
+		// [grp1] call PL_fnc_WaypointClear
+		class WaypointClear {};	// удаление вейпоинтов
+
 		// [] spawn PL_fnc_initMP;
 		class initMP {}; // стартовые параметры для КООП миссий
 
@@ -82,9 +82,6 @@ class Platforma {
 			
 		// [] spawn PL_fnc_nouniform;
 		class nouniform {}; // отключение смены униформы у игрока
-		
-		// [] spawn PL_fnc_RealisticUnitsRagdoll;
-		class RealisticUnitsRagdoll {}; // реалистичный регдол для солдат (не подрыгивает при смерти)
 						
 		// [p1,p2] spawn PL_fnc_privet;
 		class privet {}; // воинское приветствие 
@@ -94,16 +91,16 @@ class Platforma {
 		
 		// [t1,t2,3] spawn PL_fnc_tankfire;
 		class tankfire {}; // стрельба танка по мишени
-
-		// [10,"Bo_Mk82",bot_1,8,80] spawn PL_fnc_bomb;
-		class bomb {}; // артобстрел
 		
 		// ["M_ed","M_st",100,300] spawn PL_fnc_Grad;
 		class grad {}; // обстрел ракетами зону
 
 		// [name,"marker",20] spawn PL_fnc_GradFire;
 		class gradFire {}; // арта (град) эффектно стреляют вверх
-		
+
+		// [arty,getmarkerpos "marker",4] call PL_fnc_ArtyFire;
+		class ArtyFire {}; // Стрельба артиллерии по точке
+
 		// [radio] spawn PL_fnc_radioru;
 		class radioru {}; // динамические радиопереговоры
 		
@@ -113,15 +110,24 @@ class Platforma {
 		// ["ALPHA","STRD_Task1","hint 'работает!'"] call PL_fnc_TriggerRadio;
 		class TriggerRadio {}; // Создание действия в стандартный канал радио 0-0-1
 
-		// [this] spawn PL_fnc_HousePatrol;
-		class HousePatrol {}; // Юнит патрулирует здание
-		
-		// [getPosATL player, units group player] spawn PL_fnc_OccupyHouse;
-		class OccupyHouse {}; // Юниты занимают здание в окнах
-		
 		// [trig_final,east,300] call PL_fnc_KillAll;
 		class KillAll {}; // Убийство всех солдат в радиусе
-											
+		
+		// [group] call PL_fnc_GetOut
+		class GetOut {}; // Выгрузка всех ИИ из авто
+
+		// [] spawn PL_fnc_SaveGame
+		class SaveGame {}; // Сохранение игры
+
+		// [this] spawn PL_fnc_Patrons
+		class Patrons {}; // Бесконечные патроны
+
+		// [this] spawn PL_fnc_Okop
+		class Okop {}; // Стрельба из-за укрытия ИИ
+
+		// [this] spawn PL_fnc_OkopTarget
+		class OkopTarget {}; // Нахождение целей для ИИ
+
 		// [true] call PL_fnc_Cam;
 		class Cam {}; // создание камеры
 				
@@ -139,5 +145,20 @@ class Platforma {
 
 		// [2,0.1,"start"] call PL_fnc_CamMapTarget;
 		class CamMapTarget {}; // Перемещение карты.
+
+		// [10,"Bo_Mk82",bot_1,8,80] spawn PL_fnc_bomb;
+		class bomb {}; // артобстрел
+
+		// [w1,"ups_sol"] spawn PL_fnc_UPS;
+		class UPS {}; // продвинутый скрипт патруля
+		
+		// ["ups_sol",position player,50] call PL_fnc_UPSmarker
+		class UPSmarker {}; // создание маркера-зоны патруля UPS
+
+		// [this] spawn PL_fnc_HousePatrol;
+		class HousePatrol {}; // Юнит патрулирует здание
+		
+		// [getPosATL player, units group player] spawn PL_fnc_OccupyHouse;
+		class OccupyHouse {}; // Юниты занимают здание в окнах
 	};
 };

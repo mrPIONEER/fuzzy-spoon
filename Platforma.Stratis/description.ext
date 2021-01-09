@@ -16,6 +16,50 @@ overviewText = $STRD_PL_text;
 briefing = 1;
 debriefing = 1;
 
+//enableDebugConsole = 1; // ТЕСТ, на релизе убрать!
+
+
+// Звуки
+class CfgSounds {
+    sounds[] = {};
+	
+    class PL_null { // звук заглушка
+        name = "PL_null";
+        sound[] = {s\PL_null.ogg, db + 0, 1.0};
+        titles[] = {0, ""};
+    };
+	
+	#define TEXT(I) \
+	class STRD_pl_##I \
+	{ \
+	name = "STRD_pl_##I"; \
+	sound[] = {s\STRD_pl_##I.ogg, db + 0, 1.0}; \
+	titles[] = {0, ""}; \
+	};
+
+	TEXT(SAY1)
+	TEXT(SAY2)
+	TEXT(SAY3)
+	TEXT(SAY4)
+	TEXT(SAY5)
+	TEXT(SAY6)
+	TEXT(SAY7)
+};
+
+// Музыка
+class CfgMusic {
+    tracks[] = {};
+	
+    class Baz {
+        name = "Baz";
+        sound[] = {m\Baz.ogg, db + 0, 1.0};
+    };
+};
+
+// Описание скриптов
+class CfgFunctions {
+	#include "fn\cfgFunctions.hpp"
+};
 
 // персонажи
 class CfgIdentities {
@@ -36,6 +80,47 @@ class CfgIdentities {
             pitch = 1.0;
      };
 };
+
+/*
+showHUD []  =  {
+	true , 	// весь HUD (аналогично команде showHUD) 
+	true , 	// информация о транспортном средстве и солдате 
+	true , // радар автомобиля 
+	true , // компас автомобиля [
+	true , 	// указатель направления танка 
+	true , 	// Командное меню 
+	true , 	// Панель информации о группе 
+	false , // Курсоры оружия HUD 
+	true 	// Панели дисплея автомобиля 
+};
+*/
+
+/* МП режим COOP
+
+class Header {
+	gameType = COOP;
+	minPlayers = 1;
+	maxPlayers = 5;
+};
+
+respawn = 0; // респ отключен
+enableDebugConsole = 0; // консоль только в редакторе
+enableTeamSwitch = 0; // отключен выбор игрока после старта
+joinUnassigned = 0; // игроки сами выбирают слоты
+skipLobby  =  0;  // лобби включен
+disabledAI = 0; // боты не удаляются в MP
+
+reviveMode = 1; // включаем оживление
+reviveUnconsciousStateMode = 0; // базовый тип
+reviveRequiredTrait = 0; // все могут лечить
+reviveRequiredItems = 2; // нужна аптечка или пакет
+reviveRequiredItemsFakConsumed  =  0 ; 
+reviveMedicSpeedMultiplier = 2; // множитель для медика
+reviveDelay = 15; // время оживления
+reviveForceRespawnDelay = 3; // время выхода 
+reviveBleedOutDelay = 300; // время чтобы раненный умер 
+
+*/
 
 // Дебрифинги на победу и провалы
 class CfgDebriefing {
@@ -120,86 +205,3 @@ class CfgDebriefing {
         };
     };
 };
-
-// Звуки
-class CfgSounds {
-    sounds[] = {};
-	
-    class PL_null { // звук заглушка
-        name = "PL_null";
-        sound[] = {s\PL_null.ogg, db + 0, 1.0};
-        titles[] = {0, ""};
-    };
-	
-	#define TEXT(I) \
-	class STRD_pl_##I \
-	{ \
-	name = "STRD_pl_##I"; \
-	sound[] = {s\STRD_pl_##I.ogg, db + 0, 1.0}; \
-	titles[] = {0, ""}; \
-	};
-
-	TEXT(SAY1)
-	TEXT(SAY2)
-	TEXT(SAY3)
-	TEXT(SAY4)
-	TEXT(SAY5)
-	TEXT(SAY6)
-	TEXT(SAY7)
-};
-
-// Музыка
-class CfgMusic {
-    tracks[] = {};
-	
-    class Baz {
-        name = "Baz";
-        sound[] = {m\Baz.ogg, db + 0, 1.0};
-    };
-};
-
-// Описание скриптов
-class CfgFunctions {
-	#include "fn\cfgFunctions.hpp"
-};
-
-/*
-showHUD []  =  {
-	true , 	// весь HUD (аналогично команде showHUD) 
-	true , 	// информация о транспортном средстве и солдате 
-	true , // радар автомобиля 
-	true , // компас автомобиля [
-	true , 	// указатель направления танка 
-	true , 	// Командное меню 
-	true , 	// Панель информации о группе 
-	false , // Курсоры оружия HUD 
-	true 	// Панели дисплея автомобиля 
-};
-*/
-
-/* МП режим COOP
-
-class Header {
-	gameType = COOP;
-	minPlayers = 1;
-	maxPlayers = 5;
-};
-
-respawn = 0; // респ отключен
-enableDebugConsole = 0; // консоль только в редакторе
-enableTeamSwitch = 0; // отключен выбор игрока после старта
-joinUnassigned = 0; // игроки сами выбирают слоты
-skipLobby  =  0;  // лобби включен
-disabledAI = 0; // боты не удаляются в MP
-
-reviveMode = 1; // включаем оживление
-reviveUnconsciousStateMode = 0; // базовый тип
-reviveRequiredTrait = 0; // все могут лечить
-reviveRequiredItems = 0; // не нужна аптечка
-reviveRequiredItemsFakConsumed  =  1 ; 
-reviveMedicSpeedMultiplier = 2; // множитель для медика
-reviveDelay = 15; // время оживления
-reviveForceRespawnDelay = 3; // время выхода 
-reviveBleedOutDelay = 300; // время чтобы раненный умер 
-
-*/

@@ -1,11 +1,11 @@
 /*
- Автор: PIONEER
+ РђРІС‚РѕСЂ: PIONEER
  
- Воинское приветствие
+ Р’РѕРёРЅСЃРєРѕРµ РїСЂРёРІРµС‚СЃС‚РІРёРµ
  [p1,p2] spawn PL_fnc_Privet
  
- 1 - имя юнита
- 2 - имя юнита
+ 1 - РёРјСЏ СЋРЅРёС‚Р°
+ 2 - РёРјСЏ СЋРЅРёС‚Р°
 */
 
 if (!isServer) exitWith {} ;
@@ -29,7 +29,7 @@ _unit2 playmove "AmovPercMstpSnonWnonDnon_SaluteOut";
 
 
 /* 
-AmovPercMstpSlowWrflDnon_Salute - c оружием
-AmovPercMstpSnonWnonDnon_Salute - без оружия
-AmovPercMstpSrasWpstDnon_Salute - с пистолетом
+AmovPercMstpSlowWrflDnon_Salute - c РѕСЂСѓР¶РёРµРј
+AmovPercMstpSnonWnonDnon_Salute - Р±РµР· РѕСЂСѓР¶РёСЏ
+AmovPercMstpSrasWpstDnon_Salute - СЃ РїРёСЃС‚РѕР»РµС‚РѕРј
 */

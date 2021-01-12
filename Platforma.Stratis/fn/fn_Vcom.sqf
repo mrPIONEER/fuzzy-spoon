@@ -7,6 +7,8 @@
 	[] call PL_fnc_Vcom;
 */
 
+if (!isServer) exitWith {};
+
 {
 	_x setVariable ["VCM_Skilldisable",true];
 	_x setVariable ["VCM_NOFLANK",true];

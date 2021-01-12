@@ -11,6 +11,7 @@ if (!isServer) exitWith {} ;
 private ["_unit","_handle1","_handle2","_pos"];
 
 _unit = _this select 0;
+[_unit] spawn PL_fnc_OkopTarget;
 
 _handle1 = _unit addEventHandler ["FiredNear",
 {
@@ -52,6 +53,7 @@ while
 }
 do
 {
+	if (!alive _unit) exitWith {};
 	_unit setUnitPos "middle";
 
 	sleep (3 + random 10);

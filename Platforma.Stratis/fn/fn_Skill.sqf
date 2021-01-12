@@ -6,6 +6,8 @@
 	[] spawn PL_fnc_Skill
 */
 
+if (!isServer) exitWith {};
+
 // нужно, чтобы перезаписать параметры игры и других скриптов
 sleep 10;
 

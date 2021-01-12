@@ -18,7 +18,11 @@ params ["_pos","_side","_xy",["_dam",true],["_who","Man"]];
 
 {
 	if (side _x == _side) then {
-	if (_dam) then {_x setDammage 1} else {deleteVehicle _x}
+		if (_dam) then {_x setDammage 1} else {
+			_v = _x;
+			{_v deleteVehicleCrew _x} forEach crew _v;
+			deleteVehicle _x;
+			}
 	}
 } forEach (
 	_pos nearEntities [[_who], _xy]

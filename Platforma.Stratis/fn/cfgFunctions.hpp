@@ -146,6 +146,9 @@ class Platforma {
 		// [2,0.1,"start"] call PL_fnc_CamMapTarget;
 		class CamMapTarget {}; // Перемещение карты.
 
+		// [1,2,false,true] call PL_fnc_cinemaBorder;
+		class CinemaBorder {}; // плавное погружение в камеру и выход из неё
+
 		// [10,"Bo_Mk82",bot_1,8,80] spawn PL_fnc_bomb;
 		class bomb {}; // артобстрел
 

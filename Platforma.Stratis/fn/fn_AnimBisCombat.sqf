@@ -2,11 +2,12 @@
 	Автор: PIONEER
 	Измененный BIS_fnc_ambientAnimCombat
 	
-	[this,"STAND1",{time>5}] call PL_fnc_AnimBisCombat;
+	_p=[this,"STAND1",{triggerActivated spalili_zone_1},true] spawn PL_fnc_AnimBisCombat;
 	
 	1 - юнит
 	2 - анимация
 	3 - условия выхода из анимации (опционально)
+	4 - вейпоинт найти и уничтожить
 
 	STAND1	- стоит на посту с стволом
 	STAND2	- стоит на посту с стволом 
@@ -36,6 +37,7 @@ private["_unit","_animset","_cond"];
 _unit  	 	= _this param [0, objNull, [objNull]];
 _animset 	= _this param [1, "STAND", [""]];
 _cond	 	= _this param [2, {false}, ["",{}]];
+_guard	 	= _this param [3, false, [false]];
 
 if (local _unit) then {
 	
@@ -71,4 +73,12 @@ private _weapon = currentWeapon _unit;
 	) then {_unit switchmove "AmovPercMstpSlowWrflDnon";} else {_unit playmoveNow "AmovPercMstpSlowWrflDnon";};
 
 	detach _unit;
+
+	if (_guard) then {
+		_grp = group _unit;
+		_wp = _grp addWaypoint [position _unit,0];
+		_wp setWaypointType "SAD";
+		_wp setWaypointSpeed "UNCHANGED";
+		_wp setWaypointFormation "NO CHANGE";
+	};
 };

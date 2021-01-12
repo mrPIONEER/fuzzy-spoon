@@ -4,7 +4,7 @@
 	Включать если только миссия для COOP
 	
 	[] spawn PL_fnc_initMP;
-
+	
 	0 - true\false отключение JIP 
 */
 
@@ -22,6 +22,8 @@ if (isMultiplayer) then {
 		} remoteExec ["bis_fnc_call", 0];
 		}];
 	} forEach allPlayers;
+	// отключение диалогов
+	enableSentences false;
 } else {
 	// отключение переключению юнитов
 	enableTeamSwitch false;

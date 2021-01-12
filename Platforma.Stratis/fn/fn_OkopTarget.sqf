@@ -25,6 +25,7 @@ while
 }
 do
 {
+	if (!alive _man) exitWith {};
 	_enemy = (_man findNearestEnemy _man);
 
 	if (typeOf _enemy != "man") exitWith {};

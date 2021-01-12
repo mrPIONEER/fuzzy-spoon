@@ -52,6 +52,11 @@
 
 [ "Somewhere on Altis", format ["Year %1", date select 0], mapGridPosition player ] spawn BIS_fnc_infoText;
 
+// показ видео перед миссией
+["\a3\missions_f_epb\video\b_out2_quotation.ogv", "your translation"] call BIS_fnc_titlecard; 
+
+"Stratis, 2035-07-14 0130<br />A dark night ahead…" call BIS_fnc_titleText;
+
 [
 	[
 		["CAMP ROGAIN,", "<t align = 'center' shadow = '1' size = '0.7' font='PuristaBold'>%1</t>"],

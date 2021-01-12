@@ -21,16 +21,8 @@ baza setidentity "pl_person_2";
 group otr setGroupId [localize "STRD_pl_group_1", "GroupColor0"];
 group baza setGroupId [localize "STRD_pl_group_2", "GroupColor0"];
 
-// АКТИВАЦИЯ ПЕРВОНАЧАЛЬНЫХ СКРИПТОВ
-
-[] spawn PL_fnc_Debug;
-[] spawn PL_fnc_vcom;
+[] call PL_fnc_vcom;
 [] spawn PL_fnc_skill;
-[] spawn PL_fnc_Nospeed;
-[] spawn PL_fnc_nouniform;
-[] spawn PL_fnc_NoSnake;
-[] spawn PL_fnc_No3D;
-[] spawn PL_fnc_FrendlyFire;
 
 setViewDistance 2000;
 otr allowDamage true;

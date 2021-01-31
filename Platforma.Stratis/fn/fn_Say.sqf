@@ -10,7 +10,7 @@
 	5 - вывод текста автора (true\false)
 
 	Пример:
-	[player,"pl3","STR_pl3",true,true] spawn PL_fnc_Say.sqf;
+	[player,"STRD_PL_SAY1","STRD_PL_SAY1",true,true] spawn PL_fnc_Say.sqf;
 */
 
 params ["_obj","_sound","_tema","_playsound","_text"];

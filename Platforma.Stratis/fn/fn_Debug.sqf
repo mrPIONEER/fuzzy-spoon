@@ -2,7 +2,7 @@
 	Автор: PIONEER
 	Дебаг скрипт для быстрой проверки миссии.
 	
-	[] spawn PL_fnc_fnDebug;
+	[] spawn PL_fnc_Debug;
 */
 
 hint "Debug ON!";

@@ -2,22 +2,21 @@
 	По всем пунктам статья - https://community.bistudio.com/wiki/Description.ext
 */
 
-briefingName = $STRD_PL_name;
-onLoadName = $STRD_PL_name;
-onLoadIntro = $STRD_PL_name;
-onLoadMission = $STRD_PL_init;
+briefingName = $STRD_PL_briefingName;
+onLoadName = $STRD_PL_onLoadName;
+onLoadIntro = $STRD_PL_onLoadIntro;
+onLoadMission = $STRD_PL_onLoadMission;
 
 author = "PIONEER";
 
 loadScreen = "logo.jpg";
 overviewPicture = "logo.jpg";
-overviewText = $STRD_PL_text;
+overviewText = $STRD_PL_overviewText;
 
 briefing = 1;
 debriefing = 1;
 
 //enableDebugConsole = 1; // ТЕСТ, на релизе убрать!
-
 
 // Звуки
 class CfgSounds {
@@ -81,6 +80,16 @@ class CfgIdentities {
      };
 };
 
+/* удаление трупов
+
+corpseManagerMode = 1; // вкл
+corpseLimit = 1; // лимит трупов
+corpseRemovalMinTime = 60;
+corpseRemovalMaxTime = 1200;
+minPlayerDistance = 150;
+
+*/
+
 /*
 showHUD []  =  {
 	true , 	// весь HUD (аналогично команде showHUD) 
@@ -108,15 +117,15 @@ enableDebugConsole = 0; // консоль только в редакторе
 enableTeamSwitch = 0; // отключен выбор игрока после старта
 joinUnassigned = 0; // игроки сами выбирают слоты
 skipLobby  =  0;  // лобби включен
-disabledAI = 0; // боты не удаляются в MP
+disabledAI = 0; // боты удаляются в МП
 
 reviveMode = 1; // включаем оживление
 reviveUnconsciousStateMode = 0; // базовый тип
 reviveRequiredTrait = 0; // все могут лечить
 reviveRequiredItems = 2; // нужна аптечка или пакет
-reviveRequiredItemsFakConsumed  =  0 ; 
+reviveRequiredItemsFakConsumed  =  1; // расход аптечки
 reviveMedicSpeedMultiplier = 2; // множитель для медика
-reviveDelay = 15; // время оживления
+reviveDelay = 7; // время оживления
 reviveForceRespawnDelay = 3; // время выхода 
 reviveBleedOutDelay = 300; // время чтобы раненный умер 
 
@@ -125,9 +134,9 @@ reviveBleedOutDelay = 300; // время чтобы раненный умер
 // Дебрифинги на победу и провалы
 class CfgDebriefing {
     class end1 {
-        title = "$STRD_end1";
-        subtitle = "";
-        description = "$STRD_end1_des";
+        title = "$STRD_PL_end1";
+        subtitle = "$STRD_PL_end1_pos";
+        description = "$STRD_PL_end1_des";
         pictureBackground = "";
         picture = "b_inf";
         pictureColor[] = {
@@ -135,9 +144,9 @@ class CfgDebriefing {
         };
     };
     class epicFail {
-        title = "$STRD_Loser";
-        subtitle = "";
-        description = "";
+        title = "$STRD_PL_Loser";
+        subtitle = "$STRD_PL_Loser_pos";
+        description = "$STRD_PL_Loser_des";
         pictureBackground = "";
         picture = "b_inf";
         pictureColor[] = {
@@ -145,8 +154,8 @@ class CfgDebriefing {
         };
     };
     class pl_loser_desertir {
-        title = "$STRD_Loser";
-        subtitle = "$STRD_proval_loser";
+        title = "$STRD_PL_Loser";
+        subtitle = "$STRD_PL_proval_loser";
         description = "";
         pictureBackground = "";
         picture = "b_inf";
@@ -155,8 +164,8 @@ class CfgDebriefing {
         };
     };
     class pl_loser_frendlyfire {
-        title = "$STRD_Loser";
-        subtitle = "$STRD_proval_frendlyFire";
+        title = "$STRD_PL_Loser";
+        subtitle = "$STRD_PL_proval_frendlyFire";
         description = "";
         pictureBackground = "";
         picture = "b_inf";
@@ -165,7 +174,7 @@ class CfgDebriefing {
         };
     };
     class pl_loser_civilian {
-        title = "$STRD_Loser";
+        title = "$STRD_PL_Loser";
         subtitle = "$STRD_proval_civilian";
         description = "";
         pictureBackground = "";
@@ -175,8 +184,8 @@ class CfgDebriefing {
         };
     };
     class pl_loser_fire {
-        title = "$STRD_Loser";
-        subtitle = "$STRD_proval_fire";
+        title = "$STRD_PL_Loser";
+        subtitle = "$STRD_PL_proval_fire";
         description = "";
         pictureBackground = "";
         picture = "b_inf";
@@ -185,18 +194,8 @@ class CfgDebriefing {
         };
     };
     class pl_loser_kill_player {
-        title = "$STRD_Loser";
-        subtitle = "$STRD_pl_loser_kill_player";
-        description = "";
-        pictureBackground = "";
-        picture = "b_inf";
-        pictureColor[] = {
-            0.0, 0.3, 0.6, 1
-        };
-    };
-    class pl_loser_jip {
-        title = "$STRD_Loser";
-        subtitle = "$STRD_pl_loser_jip";
+        title = "$STRD_PL_Loser";
+        subtitle = "$STRD_PL_loser_kill_player";
         description = "";
         pictureBackground = "";
         picture = "b_inf";

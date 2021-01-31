@@ -1,13 +1,13 @@
 /*
-	Тестовая миссия.
+	Тестовая миссия
 */
 
 playmusic "baz";
 [parseText localize "STRD_PL_start", true, nil, 7, 0.7, 0] spawn BIS_fnc_textTiles; // стартовый текст
 
 _rolik = [] spawn {
-// Ролик
-waitUntil {preloadCamera getMarkerPos "marker"};
+_start = [otr] spawn PL_fnc_CamLoad;
+waitUntil {scriptDone _start};
 [otr,"STRD_PL_SAY1","STRD_PL_SAY1",false,true] spawn PL_fnc_Say;
 [true] call PL_fnc_Cam;
 [otr,[1,2,1.7],0] call PL_fnc_CamTarget;
@@ -29,6 +29,7 @@ sleep 2;
 [otr,[1,2,1.7],0] call PL_fnc_CamTarget;
 sleep 2;
 [false] call PL_fnc_Cam;
+[] spawn PL_fnc_savegame;
 // Ролик
 };
 
@@ -52,7 +53,7 @@ sleep 5;
 // ждем зачистки и активации тригера
 waitUntil {triggerActivated trig_final};
 [trig_final,resistance,300] call PL_fnc_KillAll; // удаление недобитков
-["task1","SUCCEEDED"] call BIS_fnc_taskSetState; // выполнение 1 задачи
+if (isServer) then {["task1","SUCCEEDED"] call BIS_fnc_taskSetState}; // выполнение 1 задачи
 sleep 2;
 [leader otr,"STRD_PL_SAY6","STRD_PL_SAY6"] spawn PL_fnc_SayRadio;
 sleep 5;

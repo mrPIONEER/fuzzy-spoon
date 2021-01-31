@@ -2,6 +2,8 @@
 
 [ vehicle player, 50, 60, true, 0] spawn BIS_fnc_UnitCapture;
 
+[player] call BIS_fnc_cameraOld; // вкл камеры старой
+
 // ДЕЙСТВИЕ: 
 
 [

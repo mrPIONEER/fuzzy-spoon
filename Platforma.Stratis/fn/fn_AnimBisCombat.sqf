@@ -75,6 +75,7 @@ private _weapon = currentWeapon _unit;
 	detach _unit;
 
 	if (_guard) then {
+		hint "ok";
 		_grp = group _unit;
 		_wp = _grp addWaypoint [position _unit,0];
 		_wp setWaypointType "SAD";

@@ -5,10 +5,7 @@
 	Набор стандартных скриптов: https://community.bistudio.com/wiki/Event_Scripts
 */
 
-
-// jip
-if !(isNil "INITDONE") exitWith {};
-INITDONE = true;
+if (didJIP) exitWith {};
 
 titleCut ["","Black faded",0];
 
@@ -22,7 +19,16 @@ group otr setGroupId [localize "STRD_pl_group_1", "GroupColor0"];
 group baza setGroupId [localize "STRD_pl_group_2", "GroupColor0"];
 
 [] call PL_fnc_vcom;
+[] call PL_fnc_initMP;
 [] spawn PL_fnc_skill;
+PL_CadetMode = if (difficulty in [0,1]) then {true} else {false};
+
+// ДЕБАГ
+[] spawn {
+	[] spawn PL_fnc_Debug;
+	waitUntil {false};
+	[player_of,east,300] call PL_fnc_KillAll;
+};
 
 setViewDistance 2000;
 otr allowDamage true;
@@ -30,18 +36,10 @@ otr allowDamage true;
 player call compile preprocessFileLineNumbers "equip\s1.sqf";
 
 // ЗАДАЧИ
-["task1", true, [localize "STRD_Task1_des", localize "STRD_Task1","task1"], getMarkerPos "task1", "CREATED", 1, true, true, "default", true] call BIS_fnc_setTask;
+if (isServer) then {
+	["task1", true, [localize "STRD_Task1_des", localize "STRD_Task1","task1"], getMarkerPos "task1", "CREATED", 1, true, true, "default", true] call BIS_fnc_setTask;
+};
 
-// БРИФИНГ
-player createDiaryRecord ["Diary", [localize "STRD_Plan_title1", localize "STRD_Plan1"]];
-player createDiaryRecord ["Diary", [localize "STRD_Plan_title2", localize "STRD_Plan2"]];
-
-// Блюр
-"dynamicBlur" ppEffectEnable true;
-"dynamicBlur" ppEffectAdjust [6]; 
-"dynamicBlur" ppEffectCommit 0;  
-"dynamicBlur" ppEffectAdjust [0.0]; 
-"dynamicBlur" ppEffectCommit 5;
 
 sleep 2;
 titleCut ["","Black in",1];
@@ -49,4 +47,4 @@ titleCut ["","Black in",1];
 enableRadio true;
 
 // стартовый скрипт миссии
-//[] execVM "start_mission.sqf";
+[] execVM "flow_1.sqf";

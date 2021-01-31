@@ -112,7 +112,10 @@ class Platforma {
 
 		// [trig_final,east,300] call PL_fnc_KillAll;
 		class KillAll {}; // Убийство всех солдат в радиусе
-		
+
+		// [this,"MP+VETERAN",false] call PL_fnc_KILLin
+		class KILLin {}; // удаление в MP \ VETERAN \ MP+VETERAN
+
 		// [group] call PL_fnc_GetOut
 		class GetOut {}; // Выгрузка всех ИИ из авто
 
@@ -130,7 +133,10 @@ class Platforma {
 
 		// [true] call PL_fnc_Cam;
 		class Cam {}; // создание камеры
-				
+
+		// ["marker"] call PL_fnc_Cam;
+		class CamLoad {}; // создание камеры
+
 		// [cam1,[11,-20,5],10] call PL_fnc_CamTarget;
 		class CamTarget {}; // камера следит на целью
 				

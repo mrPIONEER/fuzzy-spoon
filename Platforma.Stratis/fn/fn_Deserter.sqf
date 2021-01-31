@@ -30,10 +30,10 @@ sleep 2;
 sleep 2;
 
 {
-	pl_proval = player createSimpleTask [localize "STRD_proval1"];
-	pl_proval setSimpleTaskDescription[localize "STRD_proval1", localize "STRD_proval1", localize "STRD_proval1"];
+	pl_proval = player createSimpleTask [localize "STRD_PL_proval_task"];
+	pl_proval setSimpleTaskDescription[localize "STRD_PL_proval_task", localize "STRD_PL_proval_task", localize "STRD_PL_proval_task"];
 	pl_proval setTaskState "FAILED";
-	["TaskFAILED",["",localize "STRD_proval1"]] call BIS_fnc_showNotification;
+	["TaskFAILED",["",localize "STRD_PL_proval_task"]] call BIS_fnc_showNotification;
 	["pl_loser_desertir",false] call PL_fnc_EndMis;
 } remoteExec ["bis_fnc_call", 0];
 

@@ -48,24 +48,24 @@
 <Russian>Разведданные</Russian>
 </Key>
 <Key ID="STRD_Plan2">
-<Original>It is not known exactly where the missile launchers are, approximately in the area of the crossing. The type of rocket launchers is unknown, but you can find them by the characteristic sound of the shot. All fields are shot by artillery, move through them carefully and quickly.</Original>
-<Russian>Где конкретно находятся ракетные установки неизвестно, примерно в районе переправы. Тип ракетных установок неизвестен, но вы их сможете найти по характерному звуку выстрела. Все поля простреливаются артиллерией, передвигаться по ним осторожно и быстро.</Russian>
+<Original></Original>
+<Russian>Где конкретно находятся ракетные установки неизвестно, примерно в районе переправы.</Russian>
 </Key>
 <Key ID="STRD_Plan_Title3">
 <Original>Situation</Original>
 <Russian>Ситуация</Russian>
 </Key>
 <Key ID="STRD_Plan3">
-<Original>The assault on the Genshmar commune was difficult. There were heavy losses from the enemy's reactive artillery, the Germans placed them somewhere in the south. The counter artillery did not help, the German constantly drags them from place to place. There is no question of continuing the attack on Zelov as long as the enemy's artillery is in formation.</Original>
-<Russian>Штурм комуны Геншмар прошел тяжело. Были большие потери от вражеской рекктивной артиллерии, немцы разместили их где-то на юге. Контр артиллерия не помогла, немец их постоянно перетаскивает с места на место. О продолжении атаки на Зелов нет и речи, пока артиллерия противника в строю.</Russian>
+<Original></Original>
+<Russian>Штурм комуны Геншмар прошел тяжело. </Russian>
 </Key>
 <Key ID="STRD_Plan_Title4">
 <Original>Сombat diary</Original>
 <Russian>Дневник</Russian>
 </Key>
 <Key ID="STRD_Plan4">
-<Original>Well, our command finally got bored with these rocket launchers, or as we call them "Vanyushi". They whistle hoo, they can hear the whole area and smoke. Aviation cannot work in such fog and rain, our art still cannot reach them ... The foreman came, gave an order to search for these very "Vanyush". We assembled a detachment, ten soldiers, all tested in battles and will not give slack in a difficult situation. We have already found a loophole where to get through and let's hope that they will shoot and we will hear them, otherwise we will climb all the bushes.</Original>
-<Russian>Ну что ж, наше командование окончательно задолбали эти реактивные установки или как мы их называем "Ванюши". Свистят ого-го, слышно на всю округу и дымят. Авиация работать в таком тумане и дожде не может, наша арта их всё никак не достанет... Пришел старшина, отдал приказ по поиску этих самых "Ванюш". Собрали отряд, десять солдат, все проверенные в боях и не дадут слабину в сложной ситуации. Нашли уже лазейку где пробраться и будем надеяться что они будут стрелять и мы их услышим, иначе нам по всем кустам лазить.</Russian>
+<Original></Original>
+<Russian>Ну что ж, наше командование окончательно задолбали эти реактивные установки или как мы их называем "Ванюши". </Russian>
 </Key>
 
 </Container>
@@ -73,15 +73,23 @@
 <Container name="System">
 
 <!-- НАЗВАНИЕ МИССИИ -->
-<Key ID="STRD_PL_name">
+<Key ID="STRD_PL_briefingName">
 <Original></Original>
 <Russian>Название миссии</Russian>
 </Key>
-<Key ID="STRD_PL_init">
+<Key ID="STRD_PL_onLoadName">
+<Original></Original>
+<Russian>Название при загрузке</Russian>
+</Key>
+<Key ID="STRD_PL_onLoadIntro">
+<Original></Original>
+<Russian>Название при загрузке ролика</Russian>
+</Key>
+<Key ID="STRD_PL_onLoadMission">
 <Original></Original>
 <Russian>В начале миссии при загрузке, пиши чё надо.</Russian>
 </Key>
-<Key ID="STRD_PL_text">
+<Key ID="STRD_PL_overviewText">
 <Original></Original>
 <Russian>Описание миссии при выборе миссий в меню</Russian>
 </Key>
@@ -89,45 +97,57 @@
 <Original>&lt;t font='PuristaBold' size='1.6'&gt;INTERCEPT&lt;/t&gt;&lt;br /&gt;Germany, April 1945.</Original>
 <Russian>&lt;t size='1.6'&gt;ПЕРЕХВАТ&lt;/t&gt;&lt;br /&gt;Германия, апрель 1945г.</Russian>
 </Key>
+<Key ID="STRD_PL_Loading">
+<Original>Loading...</Original>
+<Russian>Загрузка...</Russian>
+</Key>
 
 <!-- ДЕБРИФИНГ -->
-<Key ID="STRD_end1">
+<Key ID="STRD_PL_end1">
 <Original></Original>
-<Russian>Ну вот и все</Russian>
+<Russian>Миссия выполнена</Russian>
 </Key> 
-<Key ID="STRD_end1_des">
+<Key ID="STRD_PL_end1_pos">
 <Original></Original>
-<Russian>Красавчик! Мир будет спать спокойно!</Russian>
+<Russian>Текст под дебрифом</Russian>
 </Key> 
-<Key ID="STRD_Loser">
+<Key ID="STRD_PL_end1_des">
+<Original></Original>
+<Russian>Текст описание дебрифа</Russian>
+</Key> 
+<Key ID="STRD_PL_Loser">
 <Original>Mission failed.</Original>
 <Russian>Миссия провалена.</Russian>
 </Key>
-<Key ID="STRD_proval_loser">
+<Key ID="STRD_PL_Loser_pos">
+<Original>Mission failed.</Original>
+<Russian>Текст под дебрифом</Russian>
+</Key>
+<Key ID="STRD_PL_Loser_des">
+<Original>Mission failed.</Original>
+<Russian>Миссия провалена.</Russian>
+</Key>
+<Key ID="STRD_PL_proval_loser">
 <Original>You ran away</Original>
 <Russian>Вы убежали</Russian>
 </Key>
-<Key ID="STRD_proval_frendlyFire">
+<Key ID="STRD_PL_proval_frendlyFire">
 <Original>Friendly fire</Original>
 <Russian>Огонь по своим</Russian>
 </Key>
-<Key ID="STRD_proval_civilian">
+<Key ID="STRD_PL_proval_civilian">
 <Original>You killed civil</Original>
 <Russian>Вы убили гражданского</Russian>
 </Key>
-<Key ID="STRD_proval_fire">
+<Key ID="STRD_PL_proval_fire">
 <Original>It is forbidden to shoot</Original>
 <Russian>Запрещено стрелять</Russian>
 </Key>
-<Key ID="STRD_pl_loser_jip">
-<Original>You can not enter during the game.</Original>
-<Russian>Нельзя заходить во время игры.</Russian>
-</Key>
-<Key ID="STRD_pl_loser_kill_player">
+<Key ID="STRD_PL_loser_kill_player">
 <Original>One of the players has died.</Original>
 <Russian>Один из игроков умер.</Russian>
 </Key>
-<Key ID="STRD_proval1">
+<Key ID="STRD_PL_proval_task">
 <Original>Complete all assigned tasks.</Original>
 <Russian>Выполнять все поставленные задачи.</Russian>
 </Key>

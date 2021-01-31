@@ -18,10 +18,13 @@ pl_camera = "camera" camcreate [0,0,0];
 pl_camera cameraeffect ["internal", "back"];
 showcinemaborder _border;
 enableRadio false;
+enableSaving [false, false];
 
 } else {
 
 pl_camera cameraeffect ["terminate", "Back"];
 camdestroy pl_camera;
-enableRadio true;
+if !(isMultiplayer) then {enableRadio true};
+enableSaving [true, true];
+[1,2,false,true] call PL_fnc_CinemaBorder;
 };

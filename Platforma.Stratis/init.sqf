@@ -32,6 +32,7 @@ PL_CadetMode = if (difficulty in [0,1]) then {true} else {false};
 
 setViewDistance 2000;
 otr allowDamage true;
+player action ["WEAPONONBACK", player];
 
 player call compile preprocessFileLineNumbers "equip\s1.sqf";
 

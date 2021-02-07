@@ -5,6 +5,9 @@
 	[] spawn PL_fnc_Debug;
 */
 
+// запускается только в редакторе
+if (!is3DEN) exitWith  {};
+
 hint "Debug ON!";
 player allowDamage false;
 vehicle player allowDammage false;
@@ -29,4 +32,6 @@ while {true} do {
 	waitUntil {isDamageAllowed player};
 	player allowDamage false;
 	sleep 1;
+};
+
 };

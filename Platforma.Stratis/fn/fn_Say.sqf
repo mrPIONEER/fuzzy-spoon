@@ -23,7 +23,7 @@ if (_playsound) then {
 
 	_obj say3D _sound;
 
-	if (_text and (player distance _obj < 20)) then {[localize "STR_CO_06_WW2_Intercept_pl_person_1",localize _tema] spawn BIS_fnc_showSubtitle} else {["",localize _tema] spawn BIS_fnc_showSubtitle};
+	if (_text) then {[name _obj,localize _tema] spawn BIS_fnc_showSubtitle} else {["",localize _tema] spawn BIS_fnc_showSubtitle};
 	_obj setRandomLip true;
 
 	[_obj] spawn {
@@ -37,7 +37,7 @@ if (_playsound) then {
 
 	playsound _sound;
 
-	if (_text) then {[localize "STR_CO_06_WW2_Intercept_pl_person_1",localize _tema] spawn BIS_fnc_showSubtitle} else {["",localize _tema] spawn BIS_fnc_showSubtitle};
+	if (_text) then {[name _obj,localize _tema] spawn BIS_fnc_showSubtitle} else {["",localize _tema] spawn BIS_fnc_showSubtitle};
 	_obj setRandomLip true;
 
 	[_obj] spawn {
@@ -46,5 +46,4 @@ if (_playsound) then {
 		waitUntil {isNull _sound};
 		_obj setRandomLip false;
 	};
-
 };

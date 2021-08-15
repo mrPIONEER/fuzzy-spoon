@@ -31,7 +31,7 @@ if(not(local _v))exitWith{};
 
 	sleep _delay;
 
-	//if units don't have a parachute type backpack then create parachute for him
+	// if units don't have a parachute type backpack then create parachute for him
 	private _type = getText (configFile >> "cfgVehicles" >> backpack _x >> "ParachuteClass");
 	if( not(_type isKindOf "ParachuteBase") )then
 	{

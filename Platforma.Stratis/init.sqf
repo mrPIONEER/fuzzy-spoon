@@ -41,7 +41,6 @@ if (isServer) then {
 	["task1", true, [localize "STRD_Task1_des", localize "STRD_Task1","task1"], getMarkerPos "task1", "CREATED", 1, true, true, "default", true] call BIS_fnc_setTask;
 };
 
-
 sleep 2;
 titleCut ["","Black in",1];
 1 fadesound 1;

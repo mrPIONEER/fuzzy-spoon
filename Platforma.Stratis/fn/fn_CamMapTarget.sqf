@@ -2,14 +2,14 @@
 	Автор: PIONEER
 	Перемещение карты.
 	
-	[2,0.1,"start"] call PL_fnc_CamMapTarget;
+	["start",2,0.1] call PL_fnc_CamMapTarget;
 	
-	1 - время перехода
-	2 - зум
-	3 - позиция (маркер)
+	1 - позиция (маркер)
+	2 - время перехода
+	3 - зум
 */
 
-params ["_time","_zoom","_marker"];
+params ["_marker","_time","_zoom"];
 
 mapAnimAdd [_time, _zoom, markerPos _marker];
 mapAnimCommit;

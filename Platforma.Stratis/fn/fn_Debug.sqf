@@ -33,5 +33,3 @@ while {true} do {
 	player allowDamage false;
 	sleep 1;
 };
-
-};

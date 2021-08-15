@@ -43,7 +43,10 @@ class Platforma {
 		
 		// [] spawn PL_fnc_skill;
 		class Skill {}; // Скил в 0, отключение отступления ИИ
-		
+
+		// [] spawn PL_fnc_rhsDellBala;
+		class rhsDellBala {}; // Удаляет балаклавы
+
 		// [this,"marker","MOVE","NORMAL","LINE"] call PL_fnc_Waypoint
 		class Waypoint {};	// создание вейпоинта для юнитов
 
@@ -91,7 +94,10 @@ class Platforma {
 		
 		// [t1,t2,3] spawn PL_fnc_tankfire;
 		class tankfire {}; // стрельба танка по мишени
-		
+
+		// [tank1D,pathunit1,tank1L] spawn PL_fnc_TankPath
+		class TankPath {}; // Движение танка по заданному пути
+
 		// ["M_ed","M_st",100,300] spawn PL_fnc_Grad;
 		class grad {}; // обстрел ракетами зону
 

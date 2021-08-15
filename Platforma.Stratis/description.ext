@@ -24,7 +24,7 @@ class CfgSounds {
 	
     class PL_null { // звук заглушка
         name = "PL_null";
-        sound[] = {s\PL_null.ogg, 1, 1.0};
+        sound[] = {s\PL_null.ogg, +0, 1.0};
         titles[] = {0, ""};
     };
 	
@@ -32,7 +32,7 @@ class CfgSounds {
 	class STRD_pl_##I \
 	{ \
 	name = "STRD_pl_##I"; \
-	sound[] = {s\STRD_pl_##I.ogg, 1, 1.0}; \
+	sound[] = {s\STRD_pl_##I.ogg, +0, 1.0}; \
 	titles[] = {0, ""}; \
 	};
 

@@ -11,7 +11,7 @@
 
 if (!isServer) exitWith {} ;
 
-params["_nachalo", "_konez","_kolvo","_random"];
+params ["_nachalo", "_konez","_kolvo","_random"];
 
 _xp = 0;
 _yp = 0;
